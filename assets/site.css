@@ -1,0 +1,71 @@
+/* Infinity Blend site. Colours match the app's Theme.swift. */
+*{box-sizing:border-box}
+:root{
+  --bg:#15120F;--card:#1E1915;--line:#2F2721;--honey:#EBBE73;--cream:#F3E6D0;--muted:#D8C7AE;--subtle:#A8977F;
+  --serif:ui-serif,"New York",Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--muted);font:16px/1.65 var(--sans);-webkit-text-size-adjust:100%}
+a{color:var(--honey);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{font-family:var(--serif);color:var(--cream);font-weight:600;letter-spacing:-.3px}
+
+/* Home */
+.home{min-height:100vh;display:flex;flex-direction:column;
+  background:linear-gradient(180deg,rgba(21,18,15,.55),var(--bg) 78%),url(bokeh.jpg) center top/cover no-repeat}
+.home main{flex:1;display:flex;align-items:center;justify-content:center;padding:56px 16px 32px}
+.hero{width:100%;max-width:560px;text-align:center}
+.hero img{width:120px;height:120px;border-radius:27px;box-shadow:0 14px 44px rgba(235,190,115,.18)}
+.hero h1{margin:22px 0 8px;font-size:44px;line-height:1.05}
+.hero h1 em,.brand em{font-style:normal;color:var(--honey)}
+.lead{margin:0 auto 24px;max-width:440px;font-size:18px;color:var(--muted)}
+.pill{display:inline-block;padding:9px 16px;border:1px solid var(--line);border-radius:999px;background:var(--card);
+  color:var(--cream);font-size:14px;font-weight:700;letter-spacing:.02em}
+.features{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:12px;text-align:left}
+.features li{padding:14px 16px;border:1px solid var(--line);border-radius:16px;background:rgba(30,25,21,.85)}
+.features strong{display:block;color:var(--cream);font-size:15px}
+.features span{font-size:14px;color:var(--subtle)}
+.links{margin-top:32px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;font-size:14px}
+.site-foot{padding:20px 16px 28px;text-align:center;color:var(--subtle);font-size:12.5px;border-top:1px solid var(--line)}
+.site-foot p{margin:4px 0}
+
+/* Inner pages */
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:18px max(16px,calc((100vw - 1040px)/2));border-bottom:1px solid var(--line)}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--cream);font:600 21px/1 var(--serif)}
+.brand:hover{text-decoration:none}
+.brand img{width:36px;height:36px;border-radius:9px}
+.bar-link{font-size:14px}
+.shell{max-width:1040px;margin:auto;padding:36px 16px 48px;display:grid;grid-template-columns:200px minmax(0,1fr);gap:44px}
+.side{position:sticky;top:24px;align-self:start}
+.side a{display:block;color:var(--subtle);padding:8px 12px;border-left:2px solid transparent;font-size:15px}
+.side a[aria-current=page]{border-color:var(--honey);background:var(--card);color:var(--cream)}
+.side a:hover{text-decoration:none;color:var(--cream)}
+main{min-width:0}
+.eyebrow{margin:0 0 6px;color:var(--honey);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+main h1{margin:0 0 12px;font-size:36px;line-height:1.15}
+main h2{margin:30px 0 8px;font-size:21px}
+main h3{margin:22px 0 6px;font-size:17px;font-family:var(--sans)}
+main p{margin:0 0 14px;overflow-wrap:anywhere}
+main ul{margin:0 0 14px;padding-left:22px}
+main li{margin-bottom:8px}
+.draft{padding:12px 16px;border-left:3px solid var(--honey);background:var(--card);color:var(--cream);font-size:14px;border-radius:0 10px 10px 0}
+.doc-list{list-style:none;padding:0}
+.doc-list li{padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--card);margin-bottom:10px}
+.doc-list span{font-size:14px;color:var(--subtle)}
+.card{padding:16px 18px;border:1px solid var(--line);border-radius:16px;background:var(--card);margin:18px 0}
+.card p:last-child{margin-bottom:0}
+details{border-bottom:1px solid var(--line);padding:12px 0}
+summary{cursor:pointer;color:var(--cream);font-weight:600;list-style-position:outside}
+details p,details ul{margin-top:10px}
+.doc-foot{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-size:13.5px;color:var(--subtle)}
+
+@media (max-width:720px){
+  .shell{display:block;padding:24px 16px 40px}
+  .side{position:static;display:flex;overflow-x:auto;margin:0 -16px 24px;padding:0 16px;border-bottom:1px solid var(--line)}
+  .side a{white-space:nowrap;border-left:0;border-bottom:2px solid transparent;padding:10px 12px}
+  .side a[aria-current=page]{border-color:var(--honey);background:none}
+  main h1{font-size:30px}
+  .hero h1{font-size:38px}
+}
